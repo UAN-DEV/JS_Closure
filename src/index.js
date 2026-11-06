@@ -27,9 +27,8 @@ console.log(limited());
 
 // Task #3
 
-function createFilter(callback) {
-  return (arr) => arr.filter((el) => callback(el));
-}
+const createFilter = callback => arr => arr.filter(callback);
+
 
 // Create filter for even numbers
 const getEvenNumbers = createFilter((el) => el % 2 === 0);
